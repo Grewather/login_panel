@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login/register panel</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+      body {
+        background: rgb(140, 122, 18);
+        background: linear-gradient(
+          90deg,
+          rgba(140, 122, 18, 0.9867297260701156) 10%,
+          rgba(195, 192, 71, 0.9867297260701156) 50%,
+          rgba(185, 187, 96, 1) 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form-bg {
+        background-color: white;
+        padding: 20px;
+        width: 100%;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        -webkit-box-shadow: 7px 6px 30px -12px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 7px 6px 30px -12px rgba(66, 68, 90, 1);
+        box-shadow: 7px 6px 30px -12px rgba(66, 68, 90, 1);
+      }
+      .sign-text {
+        text-align: center;
+      }
+      .form-inputs {
+        border-radius: 10px;
+        border: 1px black solid;
+        display: flex;
+      }
+      form p {
+        text-align: center;
+      }
+      input {
+        display: block;
+        padding: 10px;
+        margin: 10px;
+        width: 90%;
+      }
+      .btnSubmit {
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgb(215, 79, 79);
+        border: 1px black solid;
+      }
+      .btnSubmit:hover {
+        background-color: rgb(233, 63, 63);
+      }
+      .btnSubmit:active {
+        background-color: rgb(237, 134, 134);
+      }
+      .info {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- LOGIN -->
+      <!-- <p class="info"><%=info %></p> -->
+      <p
+        style="
+          text-align: center;
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 10px;
+        "
+        class="info"
+      >
+        <%=info %>
+      </p>
+
+      <div class="form-bg">
+        <h1 class="sign-text">sing in</h1>
+
+        <form action="/account/log" method="post" id="forma">
+          <div class="form_input_ct">
+            <input
+              type="text"
+              name="username"
+              class="form-inputs"
+              placeholder="Username"
+              required
+              autofocus
+            />
+          </div>
+          <div class="form_input_ct">
+            <input
+              type="password"
+              name="password"
+              class="form-inputs"
+              placeholder="password"
+              required
+              autofocus
+            />
+          </div>
+          <input type="submit" value="submit" class="btnSubmit" />
+        </form>
+      </div>
+      <!-- Password -->
+      <div class="form-bg">
+        <h1 class="sign-text">Sing up</h1>
+        <form action="/account/reg" method="post">
+          <input
+            type="text"
+            name="username"
+            class="form-inputs"
+            placeholder="Username"
+            required
+            autofocus
+          />
+          <input
+            type="password"
+            name="password"
+            class="form-inputs"
+            class="form-control"
+            placeholder="password"
+            required
+            autofocus
+          />
+          <input type="submit" value="submit" class="btnSubmit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
